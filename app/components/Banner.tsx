@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Banner = () => {
@@ -33,10 +34,14 @@ const Banner = () => {
     <div>
         <div className='flex relative z-0'>
         <Swiper
-        autoplay
+        autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
         loop
         spaceBetween={10}
         slidesPerView={1}
+        modules={[Autoplay]}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
         onBeforeInit={(swiper) => {
