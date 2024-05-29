@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 const Home = () => {
   
   return (
-    <div className='h-screen w-screen bg-white'>
+    <div className='h-screen max-w-full bg-white'>
       <Navbar />
       <Banner />
       <div className='flex bg-blue-500'>
@@ -15,8 +15,6 @@ const Home = () => {
       <div className='flex bg-black'>
 next
       </div>
-      <Footer />
-      <Footer />
       <Footer />
     </div>
   )

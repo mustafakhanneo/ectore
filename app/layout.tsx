@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
+import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${adelia.variable} ${nature.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${adelia.variable} ${nature.variable}`}><HydrationOverlay>{children}</HydrationOverlay></body>
     </html>
   );
 }
