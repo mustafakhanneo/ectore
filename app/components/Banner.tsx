@@ -75,12 +75,12 @@ const Banner = () => {
         </div>
           <div className="w-full pt-16 text-center md:w-full">
             <p
-              className="sm:mb-8 mb-5 font-adelia text-xl md:text-4xl text-white lg:text-5xl"
+              className="sm:mb-10 mb-5 font-adelia text-xl md:text-4xl text-white lg:text-5xl"
             >
               {item.title}
             </p>
             <p
-              className="line-clamp-3 lg:mb-12 md:mb-6 mb-5 font-sans text-xs md:text-sm text-white lg:text-lg opacity-80"
+              className="line-clamp-3 lg:mb-12 md:mb-6 mb-4 font-sans text-xs md:text-sm text-white lg:text-lg opacity-80"
             >
               {item.description}
             </p>
