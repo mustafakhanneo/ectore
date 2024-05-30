@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
@@ -10,7 +10,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Banner = () => {
-    const swiperRef = useRef<SwiperCore>();  
+    const swiperRef = useRef<SwiperCore>(); 
+    const [currentIndex, setCurrentIndex] = useState<number>(swiperRef.current?.realIndex ?? 0)
+    const handleIndex = () => {
+        if (swiperRef.current?.realIndex !== undefined) {
+          setCurrentIndex(swiperRef.current.realIndex);
+          console.log(swiperRef.current);
+        }
+      };
+     
     const banner = [{
         url: "https://picsum.photos/1500/500",
         title: "Summer Collection",
@@ -32,7 +40,7 @@ const Banner = () => {
         description: "Don't Miss Out on Our Limited Collection! Discover rare and unique pieces available for a short time only. Each item in this collection is designed to stand out and is perfect for those who love to wear something truly special. Shop now before they're gone!"
       },
       ]
-    
+
   return (
     <div>
         <div className='flex relative z-0'>
@@ -46,7 +54,7 @@ const Banner = () => {
         slidesPerView={1}
         effect='fade'
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
-        onSlideChange={() => console.log('slide change')}
+        onSlideChange={handleIndex}
         onSwiper={(swiper) => console.log(swiper)}
         onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
@@ -94,6 +102,11 @@ const Banner = () => {
       </SwiperSlide>))}
 
         </Swiper>
+        <div className="absolute sm:bottom-4 bottom-2 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {banner.map((item, index) => (
+        <span key={index} onClick={() => swiperRef.current?.slideTo(index)} className={`${currentIndex === index ? 'w-8 bg-white' : 'w-4 bg-white/50'} block h-1 cursor-pointer rounded-2xl transition-all`}></span>
+        ))}
+        </div>
         </div>
         
     </div>
