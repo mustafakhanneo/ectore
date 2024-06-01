@@ -259,7 +259,7 @@ const Bestseller = () => {
     </div>
     <div className="mt-3 flex justify-between mb-4 text-sm">
       <button className='border border-black text-black rounded-lg px-4 py-2 font-archivo hover:bg-black/80 hover:text-white'>Add to Cart</button>
-      <button className='bg-black rounded-lg px-4 py-2 font-archivo hover:bg-black/80'>Buy Now</button>
+      <button className='bg-black rounded-lg px-4 py-2 text-white font-archivo hover:bg-black/80'>Buy Now</button>
     </div>
   </div>
 </a>
