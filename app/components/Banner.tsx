@@ -8,7 +8,6 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Image from 'next/image';
 
 const Banner = () => {
     const swiperRef = useRef<SwiperCore>(); 
