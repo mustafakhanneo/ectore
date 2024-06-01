@@ -32,7 +32,7 @@ const Bestseller = () => {
 
     const products = [
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "Warm Wear 360",
         clothes: true,
      accessories: false,
@@ -41,7 +41,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "scarf tinglr",
         clothes: false,
      accessories: true,
@@ -50,7 +50,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "duktin top",
         clothes: true,
      accessories: false,
@@ -59,7 +59,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "fisher neclows",
         clothes: false,
      accessories: true,
@@ -68,7 +68,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "albela tangay",
         clothes: true,
      accessories: false,
@@ -77,7 +77,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "hustopium fuss",
         clothes: false,
      accessories: true,
@@ -86,7 +86,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "carpet of culobian",
         clothes: true,
      accessories: false,
@@ -95,7 +95,7 @@ const Bestseller = () => {
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/250/350",
+        url: "https://picsum.photos/300/450",
         title: "jewl of gingr",
         clothes: false,
      accessories: true,
@@ -179,7 +179,7 @@ const Bestseller = () => {
   <img
     src={item.url}
     alt=""
-    className="h-[400px] w-full object-cover sm:h-[350px]"
+    className="h-[400px] w-full object-cover sm:h-[400px]"
   />
 
   <div className="mt-1.5">
