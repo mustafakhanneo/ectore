@@ -21,6 +21,7 @@ const config: Config = {
         archivo: ['var(--font-archivo)'],
         pilcrow: ['var(--font-pilcrow)'],
         tanker: ['var(--font-tanker)'],
+        nunito: ['var(--font-nunito)'],
       },
     },
   },

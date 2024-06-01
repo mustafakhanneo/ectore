@@ -35,6 +35,11 @@ const tanker = localFont({
   display: 'swap',
   variable: '--font-tanker',
 })
+const nunito = localFont({
+  src: './fonts/Nunito-Regular.ttf',
+  display: 'swap',
+  variable: '--font-nunito',
+})
 const pilcrow = localFont({
   src: './fonts/PilcrowRounded-Heavy.ttf',
   display: 'swap',
@@ -54,7 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${adelia.variable} ${nature.variable} ${archivo.variable} ${pilcrow.variable} ${tanker.variable} ${rubik.variable}`}><HydrationOverlay>{children}</HydrationOverlay></body>
+      <body className={`${inter.variable} ${adelia.variable} ${nunito.variable} ${nature.variable} ${archivo.variable} ${pilcrow.variable} ${tanker.variable} ${rubik.variable}`}><HydrationOverlay>{children}</HydrationOverlay></body>
     </html>
   );
 }

@@ -3,6 +3,7 @@ import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Catcarousel from './components/Catcarousel'
+import Bestseller from './components/Bestseller'
 
 const Home = () => {
   
@@ -11,6 +12,7 @@ const Home = () => {
       <Navbar />
       <Banner />
       <Catcarousel />
+      <Bestseller />
       <div className='flex bg-blue-500'>
      prev
       </div>

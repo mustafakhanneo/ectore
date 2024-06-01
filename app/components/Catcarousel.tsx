@@ -73,7 +73,7 @@ const Catcarousel = () => {
       };
 
   return (
-    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='flex lg:flex-row md:flex-row flex-col'>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='flex lg:flex-row md:flex-row flex-col bg-white lg:pt-2 md:pt-2'>
         <div className="flex lg:flex-col md:flex-col flex-row justify-center gap-2 bg-white items-center text-black p-4 lg:w-1/4 md:w-1/4">
             <p className='font-tanker lg:text-xl md:text-lg text-sm'>Ectore Premium</p>
             <p className='font-tanker lg:text-xl md:text-lg text-sm'>Shop by Collection</p>
