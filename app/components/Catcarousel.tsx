@@ -64,13 +64,13 @@ const Catcarousel = () => {
       ]
 
   return (
-    <div className='flex lg:flex-row md:flex-col flex-col'>
-        <div className="flex lg:flex-col md:flex-row flex-row justify-center gap-2 bg-white items-center text-black p-4 lg:w-1/4">
+    <div className='flex lg:flex-row md:flex-row flex-col'>
+        <div className="flex lg:flex-col md:flex-col flex-row justify-center gap-2 bg-white items-center text-black p-4 lg:w-1/4 md:w-1/4">
             <p className='font-nature lg:text-lg md:text-sm text-xs'>Ectore Premium</p>
             <p className='font-nature lg:text-lg md:text-sm text-xs'>Shop by Collection</p>
         </div>
 
-    <div className='items-center w-full h-auto bg-white sm:px-8 px-5 lg:w-3/4'>
+    <div className='items-center w-full h-auto bg-white sm:px-8 px-5 lg:w-3/4 md:w-3/4'>
         
         <div className="flex relative z-0 px-2 pt-4 pb-8 items-center ">
         <Swiper
