@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 const Banner = () => {
     const swiperRef = useRef<SwiperCore>(); 
     const [currentIndex, setCurrentIndex] = useState<number>(swiperRef.current?.realIndex ?? 0)
+    const [isHover, setIsHover] = useState(false)
     const handleIndex = () => {
         if (swiperRef.current?.realIndex !== undefined) {
           setCurrentIndex(swiperRef.current.realIndex);
@@ -41,8 +42,16 @@ const Banner = () => {
       },
       ]
 
+      const handleMouseEnter = () => {
+        setIsHover(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setIsHover(false);
+      };
+
   return (
-    <div>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         <div className='flex relative z-0'>
         <Swiper
         autoplay={{
@@ -72,7 +81,7 @@ const Banner = () => {
         </div>
         <div className="absolute inset-0 flex flex-row h-full w-full items-center justify-around bg-black/30">
         <div className='flex items-center justify-start sm:p-4 p-0 z-10'>
-        <button className='bg-transparent items-center text-white hover:text-black hover:bg-white/60 rounded-full p-2' onClick={() => swiperRef.current?.slidePrev()}>
+        <button className={`bg-transparent items-center ${isHover ? "text-white hover:text-black hover:bg-white/60" : "text-transparent"} rounded-full p-2`} onClick={() => swiperRef.current?.slidePrev()}>
             <IoChevronBackOutline className='sm:w-[30px] sm:h-[30px] w-[25px] h-[25px]'/>
         </button>
         </div>
@@ -97,7 +106,7 @@ const Banner = () => {
             </div>
           </div>
           <div className='flex items-center justify-end sm:p-4 p-0 z-10'>
-      <button className='bg-transparent text-white hover:text-black hover:bg-white/60 rounded-full p-2' onClick={() => swiperRef.current?.slideNext()}>
+      <button className={`bg-transparent ${isHover ? "text-white hover:text-black hover:bg-white/60" : "text-transparent"} rounded-full p-2`} onClick={() => swiperRef.current?.slideNext()}>
       <IoChevronForwardOutline className='sm:w-[30px] sm:h-[30px] w-[25px] h-[25px]' />
         </button>
         </div>

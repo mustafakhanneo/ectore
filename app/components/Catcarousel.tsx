@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 const Catcarousel = () => {
     const swiperRef = useRef<SwiperCore>(); 
     const [currentIndex, setCurrentIndex] = useState<number>(swiperRef.current?.realIndex ?? 0)
+    const [isHover, setIsHover] = useState(false);
     const handleIndex = () => {
         if (swiperRef.current?.realIndex !== undefined) {
           setCurrentIndex(swiperRef.current.realIndex);
@@ -63,8 +64,16 @@ const Catcarousel = () => {
       
       ]
 
+      const handleMouseEnter = () => {
+        setIsHover(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setIsHover(false);
+      };
+
   return (
-    <div className='flex lg:flex-row md:flex-row flex-col'>
+    <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='flex lg:flex-row md:flex-row flex-col'>
         <div className="flex lg:flex-col md:flex-col flex-row justify-center gap-2 bg-white items-center text-black p-4 lg:w-1/4 md:w-1/4">
             <p className='font-nature lg:text-lg md:text-sm text-xs'>Ectore Premium</p>
             <p className='font-nature lg:text-lg md:text-sm text-xs'>Shop by Collection</p>
@@ -135,12 +144,12 @@ const Catcarousel = () => {
         </div>
 
         <div className='absolute insect-0 left-0 z-50 flex -translate-x-2/4'>
-        <button className='bg-transparent items-center text-black/50 hover:text-white hover:bg-black/60 rounded-full p-2' onClick={() => swiperRef.current?.slidePrev()}>
+        <button className={`bg-transparent items-center ${isHover ? "text-black/50 hover:text-white hover:bg-black/60" : "text-transparent" }  rounded-full p-2`} onClick={() => swiperRef.current?.slidePrev()}>
             <IoChevronBackOutline className='sm:w-[30px] sm:h-[30px] w-[20px] h-[20px]'/>
         </button>
         </div>
         <div className='absolute insect-0 right-0 z-50 flex translate-x-2/4'>
-      <button className='bg-transparent text-black/50 hover:text-white hover:bg-black/60 rounded-full p-2' onClick={() => swiperRef.current?.slideNext()}>
+      <button className={`bg-transparent ${isHover ? "text-black/50 hover:text-white hover:bg-black/60" : "text-transparent" }  rounded-full p-2`} onClick={() => swiperRef.current?.slideNext()}>
       <IoChevronForwardOutline className='sm:w-[30px] sm:h-[30px] w-[20px] h-[20px]' />
         </button>
         </div>
