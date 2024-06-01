@@ -8,7 +8,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaBarsProgress } from "react-icons/fa6";
 
 const Banner = () => {
   const swiperRef = useRef<SwiperCore>();
@@ -17,7 +16,6 @@ const Banner = () => {
   );
   const [isHover, setIsHover] = useState(false);
   const [barProgress, setBarProgress] = useState<number>(0);
-  const progressBar = useRef<HTMLDivElement>(null);
 
   const onAutoplayTimeLeft = (s: SwiperCore, progress: number, percentage: number) => {
      setBarProgress((1 - percentage)*100);
@@ -145,7 +143,7 @@ const Banner = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="absolute sm:bottom-4 bottom-2 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+        <div className="absolute sm:bottom-4 bottom-2 left-2/4 z-40 flex -translate-x-2/4 gap-2">
           {banner.map((item, index) => (
             <div
               key={index}

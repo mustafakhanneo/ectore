@@ -13,6 +13,12 @@ const Catcarousel = () => {
     const swiperRef = useRef<SwiperCore>(); 
     const [currentIndex, setCurrentIndex] = useState<number>(swiperRef.current?.realIndex ?? 0)
     const [isHover, setIsHover] = useState(false);
+    const [barProgress, setBarProgress] = useState<number>(0);
+
+    const onAutoplayTimeLeft = (s: SwiperCore, progress: number, percentage: number) => {
+       setBarProgress((1 - percentage)*100);
+    };
+  
     const handleIndex = () => {
         if (swiperRef.current?.realIndex !== undefined) {
           setCurrentIndex(swiperRef.current.realIndex);
@@ -88,6 +94,7 @@ const Catcarousel = () => {
             disableOnInteraction: false,
           }}
         loop
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
         slidesPerView={3}
         spaceBetween={0}
         breakpoints={{
@@ -137,10 +144,21 @@ const Catcarousel = () => {
       </SwiperSlide>))}
 
         </Swiper>
-        <div className="absolute bottom-2 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-            {catcarousel.map((item, index) => (
-        <span key={index} onClick={() => swiperRef.current?.slideTo(index)} className={`${currentIndex === index ? 'w-8 bg-black/50' : 'w-4 bg-black/20'} block h-1 cursor-pointer rounded-2xl transition-all`}></span>
-        ))}
+        <div className="absolute sm:bottom-4 bottom-2 left-2/4 z-40 flex -translate-x-2/4 gap-2">
+          {catcarousel.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => swiperRef.current?.slideTo(index)}
+              className={`${
+                currentIndex === index ? "w-8 bg-black/30" : "w-4 bg-black/30"
+              } block h-1 cursor-pointer rounded-2xl transition-all overflow-hidden`}
+            > {currentIndex === index ? (
+              <div
+              className="h-full bg-black/50 transition-all"
+              style={{ width: `${barProgress}%` }}
+            ></div>
+            ) : null}</div>
+          ))}
         </div>
 
         <div className='absolute insect-0 left-0 z-50 flex -translate-x-2/4'>
