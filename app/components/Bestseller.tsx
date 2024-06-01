@@ -179,7 +179,7 @@ const Bestseller = () => {
   <img
     src={item.url}
     alt=""
-    className="h-[400px] w-full object-cover sm:h-[400px]"
+    className="h-[450px] w-full object-cover sm:h-[450px]"
   />
 
   <div className="mt-1.5">
