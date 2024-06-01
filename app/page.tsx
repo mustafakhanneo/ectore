@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Catcarousel from './components/Catcarousel'
 import Bestseller from './components/Bestseller'
+import Divider from './components/Divider'
 
 const Home = () => {
   
@@ -12,12 +13,13 @@ const Home = () => {
       <Navbar />
       <Banner />
       <Catcarousel />
+      <Divider />
       <Bestseller />
       <div className='flex bg-blue-500'>
      prev
       </div>
       <div className='flex bg-black'>
-next
+     next
       </div>
       <Footer />
     </div>

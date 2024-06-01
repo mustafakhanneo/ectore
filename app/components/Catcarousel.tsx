@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
-import { Autoplay, EffectFade, Navigation, Pagination  } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination  } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
