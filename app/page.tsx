@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 const Home = () => {
   
   return (
-    <div className='h-screen max-w-full bg-white'>
+    <div className='flex flex-col h-screen max-w-full bg-white'>
       <Navbar />
       <Banner />
       <div className='flex bg-blue-500'>

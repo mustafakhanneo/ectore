@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperCore } from 'swiper/types';
 import { IoChevronForwardOutline, IoChevronBackOutline } from "react-icons/io5";
@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import Image from 'next/image';
 
 const Banner = () => {
     const swiperRef = useRef<SwiperCore>(); 
@@ -20,22 +21,22 @@ const Banner = () => {
       };
      
     const banner = [{
-        url: "https://picsum.photos/1500/500",
+        url: "https://picsum.photos/1500/600",
         title: "Summer Collection",
         description: "Step into Summer with Style! Discover our vibrant Summer Collection, where lightweight fabrics, bright colors, and trendy designs come together to keep you cool and chic all season long. Shop now and refresh your wardrobe with the latest summer essentials!"
       },
       {
-        url: "https://picsum.photos/1500/500",
+        url: "https://picsum.photos/1500/600",
         title: "Winter Collection",
         description: "Embrace the Chill in Elegance! Explore our Winter Collection, featuring cozy knits, luxurious layers, and sophisticated styles to keep you warm and fashionable. From snug sweaters to stylish coats, find everything you need to stay stylish this winter."
       },
       {
-        url: "https://picsum.photos/1500/500",
+        url: "https://picsum.photos/1500/600",
         title: "Exclusive Collection",
         description: "Experience Luxury with our Exclusive Collection! Indulge in unique, high-end pieces crafted with exquisite attention to detail. Perfect for making a statement, our exclusive line offers the ultimate in fashion and sophistication. Elevate your style with these timeless pieces."
       },
       {
-        url: "https://picsum.photos/1500/500",
+        url: "https://picsum.photos/1500/600",
         title: "Limited Collection",
         description: "Don't Miss Out on Our Limited Collection! Discover rare and unique pieces available for a short time only. Each item in this collection is designed to stand out and is perfect for those who love to wear something truly special. Shop now before they're gone!"
       },
@@ -62,11 +63,14 @@ const Banner = () => {
         >
         {banner.map((item, index) => (
       <SwiperSlide key={index}>
+        <div className="relative lg:h-[500px] md:h-[350px] h-[250px] w-full">
         <img
           src={item.url}
+          sizes='w-full h-full'
           alt="image 1"
-          className="lg:h-[500px] md:h-[350px] h-[250px] w-full object-cover"
+          className='w-full h-full'
         />
+        </div>
         <div className="absolute inset-0 flex flex-row h-full w-full items-center justify-around bg-black/30">
         <div className='flex items-center justify-start sm:p-4 p-0 z-10'>
         <button className='bg-transparent items-center text-white hover:text-black hover:bg-white/60 rounded-full p-2' onClick={() => swiperRef.current?.slidePrev()}>
