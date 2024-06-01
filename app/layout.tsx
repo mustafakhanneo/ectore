@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Rubik } from "next/font/google";
 import "./globals.css";
 import localFont from 'next/font/local'
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
 
+const rubik = Rubik({
+  subsets: ["latin"],
+  variable: "--font-rubik",
+  weight: ['300', '600', '900'],
+  display: "swap",
+})
 const inter = Inter({
   subsets: ["latin"],
   display: 'swap',
@@ -14,10 +20,25 @@ const adelia = localFont({
   display: 'swap',
   variable: '--font-adelia',
 })
+const archivo = localFont({
+  src: './fonts/Archivo-Regular.ttf',
+  display: 'swap',
+  variable: '--font-archivo',
+})
 const nature = localFont({
   src: './fonts/nature.ttf',
   display: 'swap',
   variable: '--font-nature',
+})
+const tanker = localFont({
+  src: './fonts/Tanker-Regular.ttf',
+  display: 'swap',
+  variable: '--font-tanker',
+})
+const pilcrow = localFont({
+  src: './fonts/PilcrowRounded-Heavy.ttf',
+  display: 'swap',
+  variable: '--font-pilcrow',
 })
 
 
@@ -33,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${adelia.variable} ${nature.variable}`}><HydrationOverlay>{children}</HydrationOverlay></body>
+      <body className={`${inter.variable} ${adelia.variable} ${nature.variable} ${archivo.variable} ${pilcrow.variable} ${tanker.variable} ${rubik.variable}`}><HydrationOverlay>{children}</HydrationOverlay></body>
     </html>
   );
 }

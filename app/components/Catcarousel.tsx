@@ -75,8 +75,8 @@ const Catcarousel = () => {
   return (
     <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='flex lg:flex-row md:flex-row flex-col'>
         <div className="flex lg:flex-col md:flex-col flex-row justify-center gap-2 bg-white items-center text-black p-4 lg:w-1/4 md:w-1/4">
-            <p className='font-nature lg:text-lg md:text-sm text-xs'>Ectore Premium</p>
-            <p className='font-nature lg:text-lg md:text-sm text-xs'>Shop by Collection</p>
+            <p className='font-tanker lg:text-xl md:text-lg text-sm'>Ectore Premium</p>
+            <p className='font-tanker lg:text-xl md:text-lg text-sm'>Shop by Collection</p>
         </div>
 
     <div className='items-center w-full h-auto bg-white sm:px-8 px-5 lg:w-3/4 md:w-3/4'>
@@ -131,7 +131,7 @@ const Catcarousel = () => {
         />
         </div>
         <div>
-        <p className='font-nature lg:text-sm md:text-sm text-xs text-black'>{item.title}</p>
+        <p className='lg:text-sm md:text-sm text-xs font-archivo font-bold text-black'>{item.title}</p>
         </div>
         </div>
       </SwiperSlide>))}

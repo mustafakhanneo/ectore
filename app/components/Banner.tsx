@@ -92,15 +92,15 @@ const Banner = () => {
               {item.title}
             </p>
             <p
-              className="line-clamp-3 lg:mb-12 md:mb-6 mb-4 font-sans text-xs md:text-sm text-white lg:text-lg opacity-80"
+              className="line-clamp-3 lg:mb-12 md:mb-6 mb-4 font-sans text-xs md:text-sm text-white font-archivo lg:text-lg opacity-80"
             >
               {item.description}
             </p>
             <div className="flex justify-center sm:gap-10 gap-5">
-              <button className="rounded-lg font-sans lg:px-4 md:px-3 px-2 lg:py-3 md:py-2 py-1 bg-white text-xs md:text-sm text-black lg:text-lg">
+              <button className="rounded-lg font-archivo lg:px-4 md:px-3 px-2 lg:py-3 md:py-2 py-1 bg-white text-xs md:text-sm text-black lg:text-lg">
                 Explore
               </button>
-              <button className="rounded-lg font-sans lg:px-4 md:px-3 px-2 lg:py-3 md:py-2 py-1 bg-white text-xs md:text-sm text-black lg:text-lg" onClick={() => {console.log("gallery")}}>
+              <button className="rounded-lg font-archivo lg:px-4 md:px-3 px-2 lg:py-3 md:py-2 py-1 bg-white text-xs md:text-sm text-black lg:text-lg" onClick={() => {console.log("gallery")}}>
                 Gallery
               </button>
             </div>
